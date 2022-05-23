@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Guessing_game
 {
@@ -6,7 +7,9 @@ namespace Guessing_game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Guess the secret number!");
+            int guess= Int32.Parse(Console.ReadLine());
+            Console.WriteLine(guess);
         }
     }
 }
