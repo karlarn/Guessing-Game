@@ -9,8 +9,9 @@ namespace Guessing_game
         {
             Console.WriteLine("Guess the secret number!");
             int secretNumber = 42;
-            for (int i = 0; i < 4; i++)
+            for (int i = 1; i < 5; i++)
             {
+                Console.WriteLine($"You have 4 guesses. You're on {i}.");
                 int guess = Int32.Parse(Console.ReadLine());
                 if (guess == secretNumber)
                 {
