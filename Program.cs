@@ -7,11 +7,23 @@ namespace Guessing_game
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Choose your difficulty: Easy, Medium, Hard.");
+            string difficulty=Console.ReadLine().ToLower();
+            int numberToGuess=0;
+            if (difficulty=="easy"){
+                 numberToGuess=8;
+            }
+            else if(difficulty=="medium"){
+                numberToGuess=6;
+            }
+            else if(difficulty=="hard"){
+                numberToGuess=4;
+            }
             Console.WriteLine("Guess the secret number!");
             int secretNumber = new Random().Next(1,101);
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i <= numberToGuess; i++)
             {
-                Console.WriteLine($"You have 4 guesses. You're on {i}.");
+                Console.WriteLine($"You have {numberToGuess} guesses. You're on {i}.");
                 int guess = Int32.Parse(Console.ReadLine());
                 if (guess == secretNumber)
                 {
