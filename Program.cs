@@ -8,9 +8,10 @@ namespace Guessing_game
         static void Main(string[] args)
         {
             Console.WriteLine("Guess the secret number!");
-            int secretNumber = 42;
+            int secretNumber = new Random().Next(1,101);
             for (int i = 1; i < 5; i++)
             {
+                Console.WriteLine(secretNumber);
                 Console.WriteLine($"You have 4 guesses. You're on {i}.");
                 int guess = Int32.Parse(Console.ReadLine());
                 if (guess == secretNumber)
