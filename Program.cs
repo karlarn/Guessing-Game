@@ -11,7 +11,6 @@ namespace Guessing_game
             int secretNumber = new Random().Next(1,101);
             for (int i = 1; i < 5; i++)
             {
-                Console.WriteLine(secretNumber);
                 Console.WriteLine($"You have 4 guesses. You're on {i}.");
                 int guess = Int32.Parse(Console.ReadLine());
                 if (guess == secretNumber)
@@ -21,7 +20,12 @@ namespace Guessing_game
                 }
                 else
                 {
-                    Console.WriteLine("Sorry, wrong number.");
+                    if(secretNumber>guess){
+                        Console.WriteLine("Guess higher!");
+                    }
+                    else{
+                        Console.WriteLine("Guess lower!");
+                    }
 
                 }
             }
